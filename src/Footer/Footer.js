@@ -3,9 +3,11 @@ import React from 'react';
 class Footer extends React.Component {
 
     render() {
-        <div>
-            Footer
-        </div>
+        return (
+            <div>
+                Footer
+            </div>
+        )
     }
 }
 
