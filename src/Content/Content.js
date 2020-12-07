@@ -1,8 +1,130 @@
 import React from 'react';
+import DATASTORE from '../DataStore/DataStore';
+import './Content.css';
 
 class Content extends React.Component {
+    state = {
+        idx: 1,
+    }
+
+    makeSplitBox(el, index, idx, repeatFlag) {
+        if (idx === 0) {
+            // left render
+            return (
+                <div key={index} className="project-box">
+                    <div className="top-of-project-box">
+                        <div className="left-divider-left"></div>
+                        <div className={`left-divider-line-top ${repeatFlag ? 'hide-top' : 'left-top-line-on'}`}></div>
+                        <div className="left-divider-right-top"></div>
+                    </div>
+                    <div className="content-box">
+                        <div className="content-left">
+                            <div>
+                                <a href={el.deploy_link}>{el.project_name}</a>
+                            </div>
+                            <div>
+                                <img src="https://miro.medium.com/max/5000/1*jFyawcsqoYctkTuZg6wQ1A.jpeg" alt="hmm"/>
+                            </div>
+                            <div>
+                                <div>
+                                    <a href={el.client_repo}>Client</a>
+                                </div>
+                                <div>
+                                    {el.server_repo === '' ? '' : <a href={el.server_repo}>Server</a>}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="anti-flex"></div>
+                        <div className="anti-flex"></div>
+                    </div>
+                    <div className="bottom-of-project-box">
+                        <div className="left-divider-left"></div>
+                        <div className={`left-divider-line ${repeatFlag ? '' : 'left-bottom-line-on'}`}></div>
+                        <div className="left-divider-right"></div>
+                    </div>
+                </div>
+            )
+        } else if (idx === 1) {
+            // center render
+            return (
+                <div key={index} className="project-box">
+                    <div className="top-of-project-box">
+                        <div className="center-divider-left"></div>
+                        <div className="center-divider-right"></div>
+                    </div>
+                    <div className="content-box">
+                        <div className="anti-flex"></div>
+                        <div className="content-center">
+                            <div>
+                                <a href={el.deploy_link}>{el.project_name}</a>
+                            </div>
+                            <div>
+                                <div>
+                                    <a href={el.client_repo}>Client</a>
+                                </div>
+                                <div>
+                                    {el.server_repo === '' ? '' : <a href={el.server_repo}>Server</a>}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="anti-flex"></div>
+                    </div>
+                    <div className="bottom-of-project-box">
+                        <div className="center-divider-left"></div>
+                        <div className="center-divider-right"></div>
+                    </div>
+                </div>
+            )
+        } else {
+            // right render 
+            return (
+                <div key={index} className="project-box">
+                    <div className="top-of-project-box">
+                        <div className="right-divider-left-top"></div>
+                        <div className={`right-divider-line-top ${repeatFlag ? 'hide-top' : 'right-top-line-on'}`}></div>
+                        <div className="right-divider-right"></div>
+                    </div>
+                    <div className="content-box">
+                        <div className="anti-flex"></div>
+                        <div className="anti-flex"></div>
+                        <div className="content-right">
+                            <div>
+                                <a href={el.deploy_link}>{el.project_name}</a>
+                            </div>
+                            <div>
+                                <div>
+                                    <a href={el.client_repo}>Client</a>
+                                </div>
+                                <div>
+                                    {el.server_repo === '' ? '' : <a href={el.server_repo}>Server</a>}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bottom-of-project-box">
+                        <div className="right-divider-left"></div>
+                        <div className={`right-divider-line ${repeatFlag ? '' : 'right-bottom-line-on'}`}></div>
+                        <div className="right-divider-right"></div>
+                    </div>
+                </div>
+            )
+        }
+    }
 
     render() {
+        let prev = -1;
+        const projectsArr = DATASTORE.map((el, index) => {
+            const randomIdx = Math.floor(Math.random() * 3);
+            if (prev === randomIdx) {   
+                return this.makeSplitBox(el, index, randomIdx, true);
+            } else {
+                prev = randomIdx;
+                return this.makeSplitBox(el, index, randomIdx, false);
+            }
+
+        })
+
+
         return (
             <div>
                 <div>
@@ -12,11 +134,9 @@ class Content extends React.Component {
                     In the meantime, here are my recent projects:
                     <br />
                     <br />
-                    <ul>
-                        <li><a href="https://gofish-team2.vercel.app/">Multi-Player Go-Fish (Full-Stack)</a></li>
-                        <li><a href="https://spaced-rep-frontend.vercel.app/">Spaced Repetition Language Learning Platform (Full-Stack)</a></li>
-                        <li><a href="https://capstone-sliger.vercel.app/">Satire Store (Full-Stack)</a></li>
-                    </ul>
+                    <div className="projects-list">
+                        {projectsArr}
+                    </div>
                 </div>
             </div>
         )
