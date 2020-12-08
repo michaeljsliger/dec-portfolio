@@ -1,0 +1,30 @@
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.contact-sub {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 4px;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+}
+
+.contact-links a:hover {
+    color: #89fdf4;
+}
+

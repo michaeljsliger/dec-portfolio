@@ -1,0 +1,18 @@
+
+#fixeddiv {
+    bottom: 80px;
+    right: 40px;
+    position: fixed;
+    z-index: 300;
+}
+
+.big-arrow {
+    background-color: #545454;
+    border: solid black;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    padding: 3px;
+    animation: glow-bottom 2s infinite alternate;
+}

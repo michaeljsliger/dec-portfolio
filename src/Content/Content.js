@@ -136,14 +136,15 @@ class Projects extends React.Component {
 
 
         return (
-            <div>
-                <div>
-                    UNDER CONSTRUCTION:: Expected before 12/9
+            <div className="projects-outer" id="projects">
+                <div className="projects-header">
+                    <h2>Projects</h2>
+                </div>
+                <div className="projects-header-line">
+                    <div className="projects-header-line-box-left"></div>
+                    <div className="projects-header-line-box-right"></div>
                 </div>
                 <div>
-                    In the meantime, here are my recent projects:
-                    <br />
-                    <br />
                     <div className="projects-list">
                         {projectsArr}
                     </div>

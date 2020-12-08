@@ -1,6 +1,29 @@
 .header-box {
-    height: 40px;
-    width: 100vw;
-    color: white;
-    background-color: #090446; 
+    height: 90px;
+    width: 100%;
+    margin: 8px;
+    text-align: center;
+    color: black;
+    background: rgb(84,84,84);
+    background: linear-gradient(90deg, rgba(84,84,84,1) 10%, rgba(137,253,244,1) 33%, rgba(137,253,244,1) 66%, rgba(84,84,84,1) 93%);
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-links a {
+ text-decoration: none;
+ margin: 4px;
+ font-size: 18px;
+ color: white;
+ background-color: #545454;
+ padding: 4px;
+}
+
+.header-links a:hover {
+    color: black;
+    background-color: white;
 }
