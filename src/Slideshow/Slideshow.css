@@ -10,8 +10,8 @@
     top: 50%;
     width: auto;
     margin-top: -22px;
+    color: black;
     padding: 16px;
-    color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -30,4 +30,5 @@
 
 .prev:hover, .next:hover {
    background-color: rgba(0,0,0,0.8);
+   color: white;
 }
