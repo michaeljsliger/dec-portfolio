@@ -1,8 +1,9 @@
 import React from 'react';
 import DATASTORE from '../DataStore/DataStore';
 import './Content.css';
+import ImageSlideshow from '../Slideshow/Slideshow';
 
-class Content extends React.Component {
+class Projects extends React.Component {
     state = {
         idx: 1,
     }
@@ -22,10 +23,11 @@ class Content extends React.Component {
                             <div>
                                 <a href={el.deploy_link}>{el.project_name}</a>
                             </div>
+                            <ImageSlideshow name={el.project_name} />
                             <div>
-                                <img src="https://miro.medium.com/max/5000/1*jFyawcsqoYctkTuZg6wQ1A.jpeg" alt="hmm"/>
-                            </div>
-                            <div>
+                                <div>
+                                    {el.description}
+                                </div>
                                 <div>
                                     <a href={el.client_repo}>Client</a>
                                 </div>
@@ -58,7 +60,11 @@ class Content extends React.Component {
                             <div>
                                 <a href={el.deploy_link}>{el.project_name}</a>
                             </div>
+                            <ImageSlideshow name={el.project_name} />
                             <div>
+                                <div>
+                                    {el.description}
+                                </div>
                                 <div>
                                     <a href={el.client_repo}>Client</a>
                                 </div>
@@ -91,7 +97,11 @@ class Content extends React.Component {
                             <div>
                                 <a href={el.deploy_link}>{el.project_name}</a>
                             </div>
+                            <ImageSlideshow name={el.project_name} />
                             <div>
+                                <div>
+                                    {el.description}
+                                </div>
                                 <div>
                                     <a href={el.client_repo}>Client</a>
                                 </div>
@@ -115,7 +125,7 @@ class Content extends React.Component {
         let prev = -1;
         const projectsArr = DATASTORE.map((el, index) => {
             const randomIdx = Math.floor(Math.random() * 3);
-            if (prev === randomIdx) {   
+            if (prev === randomIdx) {
                 return this.makeSplitBox(el, index, randomIdx, true);
             } else {
                 prev = randomIdx;
@@ -143,4 +153,4 @@ class Content extends React.Component {
     }
 }
 
-export default Content;
+export default Projects;
