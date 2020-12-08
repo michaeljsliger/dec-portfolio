@@ -36,7 +36,7 @@ class ImageSlideshow extends React.Component {
         const displayedImage = this.state.images[this.state.index]
         return (
             <div className="slideshow-container">
-                {displayedImage ? <img src={displayedImage} /> : ''}
+                {displayedImage ? <img src={displayedImage} alt="Project Image"/> : ''}
                 {this.state.images.length > 1 ? (
                     <>
                         <a className="prev" onClick={() => this.plusSlides(-1)}>&#10094;</a>
