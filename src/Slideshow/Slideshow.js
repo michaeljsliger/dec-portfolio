@@ -39,8 +39,8 @@ class ImageSlideshow extends React.Component {
                 {displayedImage ? <img src={displayedImage} alt="Project screenshot"/> : ''}
                 {this.state.images.length > 1 ? (
                     <>
-                        <a className="prev" onClick={() => this.plusSlides(-1)}>&#10094;</a>
-                        <a className="next" onClick={() => this.plusSlides(1)}>&#10095;</a>
+                        <button className="prev" onClick={() => this.plusSlides(-1)}>&#10094;</button>
+                        <button className="next" onClick={() => this.plusSlides(1)}>&#10095;</button>
                     </>
                 )
                     : ''
