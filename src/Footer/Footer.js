@@ -13,9 +13,9 @@ class Footer extends React.Component {
                 <div className="contact-sub">
                     <h3>Contact</h3>
                     <div className="contact-links">
-                        <a target="_blank" href="mailto: michaelj.sliger@gmail.com">Email</a>
-                        <a target="_blank" href="https://github.com/michaeljsliger/">GitHub</a>
-                        <a target="_blank" href="https://www.linkedin.com/in/michael-sliger/">LinkedIn</a>
+                        <a target="_blank" rel="noreferrer" href="mailto: michaelj.sliger@gmail.com">Email</a>
+                        <a target="_blank" rel="noreferrer" href="https://github.com/michaeljsliger/">GitHub</a>
+                        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/michael-sliger/">LinkedIn</a>
                     </div>
                     <div className="back-to-top">
                         <a href="#home">Back to Top</a>

@@ -21,7 +21,7 @@ class Projects extends React.Component {
                     <div className="content-box">
                         <div className="content-left">
                             <div className="content-header-link">
-                                <a target="_blank" href={el.deploy_link}>{el.project_name}</a>
+                                <a target="_blank" rel="noreferrer" href={el.deploy_link}>{el.project_name}</a>
                             </div>
                             <ImageSlideshow name={el.project_name} />
                             <div>
@@ -29,10 +29,10 @@ class Projects extends React.Component {
                                     {el.description}
                                 </div>
                                 <div className="content-link">
-                                    <a target="_blank" href={el.client_repo}>Client</a>
+                                    <a target="_blank" rel="noreferrer" href={el.client_repo}>Client</a>
                                 </div>
                                 <div className="content-link">
-                                    {el.server_repo === '' ? '' : <a target="_blank" href={el.server_repo}>Server</a>}
+                                    {el.server_repo === '' ? '' : <a target="_blank" rel="noreferrer" href={el.server_repo}>Server</a>}
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@ class Projects extends React.Component {
                         <div className="anti-flex"></div>
                         <div className="content-center">
                             <div className="content-header-link">
-                                <a target="_blank" href={el.deploy_link}>{el.project_name}</a>
+                                <a target="_blank" rel="noreferrer" href={el.deploy_link}>{el.project_name}</a>
                             </div>
                             <ImageSlideshow name={el.project_name} />
                             <div>
@@ -66,10 +66,10 @@ class Projects extends React.Component {
                                     {el.description}
                                 </div>
                                 <div className="content-link">
-                                    <a target="_blank" href={el.client_repo}>Client</a>
+                                    <a target="_blank" rel="noreferrer" href={el.client_repo}>Client</a>
                                 </div>
                                 <div className="content-link"> 
-                                    {el.server_repo === '' ? '' : <a target="_blank" href={el.server_repo}>Server</a>}
+                                    {el.server_repo === '' ? '' : <a rel="noreferrer" target="_blank" href={el.server_repo}>Server</a>}
                                 </div>
                             </div>
                         </div>
@@ -95,7 +95,7 @@ class Projects extends React.Component {
                         <div className="anti-flex"></div>
                         <div className="content-right">
                             <div className="content-header-link">
-                                <a target="_blank" href={el.deploy_link}>{el.project_name}</a>
+                                <a target="_blank" rel="noreferrer" href={el.deploy_link}>{el.project_name}</a>
                             </div>
                             <ImageSlideshow name={el.project_name} />
                             <div>
@@ -103,10 +103,10 @@ class Projects extends React.Component {
                                     {el.description}
                                 </div>
                                 <div className="content-link">
-                                    <a target="_blank" href={el.client_repo}>Client</a>
+                                    <a target="_blank" rel="noreferrer" href={el.client_repo}>Client</a>
                                 </div>
                                 <div className="content-link">
-                                    {el.server_repo === '' ? '' : <a target="_blank" href={el.server_repo}>Server</a>}
+                                    {el.server_repo === '' ? '' : <a rel="noreferrer" target="_blank" href={el.server_repo}>Server</a>}
                                 </div>
                             </div>
                         </div>
