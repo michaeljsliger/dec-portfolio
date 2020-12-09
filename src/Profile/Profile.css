@@ -1,11 +1,9 @@
 .profile-gradient { 
     background: rgb(84,84,84);
     background: linear-gradient(rgba(84,84,84,1) 10%, rgba(219,219,219,1) 33%, rgba(219,219,219,1) 66%, rgba(84,84,84,1) 93%);
-    height: 1200px;
+    height: 800px;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .profile-content {
@@ -34,10 +32,14 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 @media all and (max-width: 600px) {
+    .profile-gradient {
+        height: 1200px;
+    }
     .profile-content {
         flex-direction: column;
         justify-content: center;
@@ -50,6 +52,19 @@
         align-items: center;
         text-align: center;
     }
+    .modal-container {
+        justify-content: flex-start;
+    }
+    
+}
+
+@media all and (min-width: 1300px) {
     .profile-picture img {
+        width: 90%;
+    }
+}
+@media all and (min-width: 1500px) {
+    .profile-picture img {
+        width: 75%;
     }
 }

@@ -20,19 +20,19 @@ class Projects extends React.Component {
                     </div>
                     <div className="content-box">
                         <div className="content-left">
-                            <div>
-                                <a href={el.deploy_link}>{el.project_name}</a>
+                            <div className="content-header-link">
+                                <a target="_blank" href={el.deploy_link}>{el.project_name}</a>
                             </div>
                             <ImageSlideshow name={el.project_name} />
                             <div>
-                                <div>
+                                <div className="content-description">
                                     {el.description}
                                 </div>
-                                <div>
-                                    <a href={el.client_repo}>Client</a>
+                                <div className="content-link">
+                                    <a target="_blank" href={el.client_repo}>Client</a>
                                 </div>
-                                <div>
-                                    {el.server_repo === '' ? '' : <a href={el.server_repo}>Server</a>}
+                                <div className="content-link">
+                                    {el.server_repo === '' ? '' : <a target="_blank" href={el.server_repo}>Server</a>}
                                 </div>
                             </div>
                         </div>
@@ -57,19 +57,19 @@ class Projects extends React.Component {
                     <div className="content-box">
                         <div className="anti-flex"></div>
                         <div className="content-center">
-                            <div>
-                                <a href={el.deploy_link}>{el.project_name}</a>
+                            <div className="content-header-link">
+                                <a target="_blank" href={el.deploy_link}>{el.project_name}</a>
                             </div>
                             <ImageSlideshow name={el.project_name} />
                             <div>
-                                <div>
+                                <div className="content-description">
                                     {el.description}
                                 </div>
-                                <div>
-                                    <a href={el.client_repo}>Client</a>
+                                <div className="content-link">
+                                    <a target="_blank" href={el.client_repo}>Client</a>
                                 </div>
-                                <div>
-                                    {el.server_repo === '' ? '' : <a href={el.server_repo}>Server</a>}
+                                <div className="content-link"> 
+                                    {el.server_repo === '' ? '' : <a target="_blank" href={el.server_repo}>Server</a>}
                                 </div>
                             </div>
                         </div>
@@ -94,19 +94,19 @@ class Projects extends React.Component {
                         <div className="anti-flex"></div>
                         <div className="anti-flex"></div>
                         <div className="content-right">
-                            <div>
-                                <a href={el.deploy_link}>{el.project_name}</a>
+                            <div className="content-header-link">
+                                <a target="_blank" href={el.deploy_link}>{el.project_name}</a>
                             </div>
                             <ImageSlideshow name={el.project_name} />
                             <div>
-                                <div>
+                                <div className="content-description">
                                     {el.description}
                                 </div>
-                                <div>
-                                    <a href={el.client_repo}>Client</a>
+                                <div className="content-link">
+                                    <a target="_blank" href={el.client_repo}>Client</a>
                                 </div>
-                                <div>
-                                    {el.server_repo === '' ? '' : <a href={el.server_repo}>Server</a>}
+                                <div className="content-link">
+                                    {el.server_repo === '' ? '' : <a target="_blank" href={el.server_repo}>Server</a>}
                                 </div>
                             </div>
                         </div>

@@ -60,9 +60,6 @@ class Dropdown extends React.Component {
                             <p>
                                 I believe that coding is the truest expression of the rational part of our being, yet there is an art to writing good code.
                             </p>
-                            <p>
-                                In this way, I strive to be an artist.
-                            </p>
                         </div>
                     ) : ''}
                 </div>
