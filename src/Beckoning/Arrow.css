@@ -8,6 +8,7 @@
 
 .big-arrow {
     background-color: #545454;
+    opacity: .4;
     border: solid black;
     border-width: 0 4px 4px 0;
     display: inline-block;
@@ -15,4 +16,16 @@
     width: 30px;
     padding: 3px;
     animation: glow-bottom 2s infinite alternate;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    padding: 8px;
+    background-color: #5454546e;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }

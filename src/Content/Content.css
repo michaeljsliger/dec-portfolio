@@ -293,3 +293,14 @@ img {
         flex: 1;
     }
 }  */
+
+
+@media all and (max-width: 600px) {
+    .anti-flex {
+        flex: 1;
+    }
+
+    .content-left, .content-center, .content-right {
+        flex: 8;
+    }
+}

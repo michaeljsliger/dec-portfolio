@@ -20,12 +20,12 @@
 }
 
 .next {
-    right: 0;
+    right: -25px;
     border-radius: 3px 0 0 3px;
 }
 
 .prev {
-    left: 0;
+    left: -25px;
 }
 
 .prev:hover, .next:hover {
